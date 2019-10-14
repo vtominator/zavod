@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
     <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
     
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i&display=swap" rel="stylesheet" />
     <title>Závod</title>
@@ -18,6 +19,7 @@
       <nav>
         <div class="row">
           <img src="resources/img/logo.png" alt="Závod logo" class="logo" />
+          <img src="resources/img/bw_logo.png" alt="Závod logo" class="logo-black" />
           <ul class="main-nav">
             <li><a href="#">Kezdőlap</a></li>
             <li><a href="#">Látnivalók</a></li>
@@ -38,7 +40,7 @@
       </div>
     </header>
 
-    <section class="section-sights">
+    <section class="section-sights js--section-sights">
       <div class="row">
         <h2>Helyi nevezetességek</h2>
         <p class="sights-text">
@@ -58,16 +60,16 @@
             <p>
               A falu szülöttei közé tartozik az a neves költő és drámaíró <strong>Váradi Antal</strong>, aki a Kisfaludy Táraság aktív tagja és a Petőfi Társaság főtitkára, valamint a korábbi Országos Színművészeti Akadémia igazgatója volt.
               <br><br>
-              Závodon élt, illetve a térség plébánosa volt az a <strong>Wosinsky Mór</strong>, aki kiterjedt régészeti feltárásokat folytatott a térségben, melynek eredményeként Közép-Európa legnagyobb kiterjedésű késő neolitikus kulturáját, a lengyeli kulturát fedezte itt fel.
+              Závodon élt az a <strong>Wosinsky Mór</strong>, aki kiterjedt régészeti feltárásokat folytatott a térségben, melynek eredményeként Közép-Európa legnagyobb kiterjedésű késő neolitikus kulturáját, a lengyeli kulturát fedezte itt fel.
             </p>
         </div>
         <div class="col span-1-of-4 box">
             <i class="ion-camera icon"></i>
             <h4>Egyházi ereklyék</h4>
             <p>
-              1777 óta őrzik a falu fölé magasodó Keresztelő Szent János templomban <strong>Szent Benedek vértanú</strong> csontjait. Závod szakrális emlékekben igen gazdag, körmeneti célokat is szolgáló 7 feszület, 7 szobor, illetve 6 kápolna díszíti.  
+              1777 óta őrzik a falu fölé magasodó barokk stílusú Keresztelő Szent János templomban <strong>Szent Benedek vértanú</strong> csontjait. Závod szakrális emlékekben gazdag, körmeneti célokat is szolgáló 7 feszület, 7 szobor, illetve 6 kápolna díszíti.  
               <br><br>
-              A település <strong>kálváriakápolnája</strong> a 14 stációval nem csak az egyházmegyében, de az egész Dél-dunántúli régióban egyedülálló kápolnatípusnak számít. 
+              A templommal szemközti domboldalon található a település kálváriája. Az itt található <strong>kálváriakápolna</strong> a 14 stációval nem csak az egyházmegyében, de az egész Dél-dunántúli régióban egyedülállónak számít. 
             </p>
         </div>        
         <div class="col span-1-of-4 box">
@@ -76,15 +78,16 @@
             <p>
               A térség gazdag természeti örökségét, a dús erdőket, értékes dombvidékeket, valamint a változatos és védett fajokban bővelkedő növény- és állatvilágot a  megőrzését a <strong>Kapos-hegyháti Natúrpark</strong> hivatott megőrizni. 
               <br><br>
-              Több, mint 38.000 hektáros területen, a 14 települést magába foglaló összefogás 30 országos műemléki védelem alatt álló épületet, valamint közel 330 építészeti védelem alatt álló építményt foglal magába.
+              Több, mint 38.000 hektáros területen, a 14 települést magába foglaló összefogás <strong>30 országos műemléki</strong> védelem alatt álló épületet, valamint közel 330 építészeti védelem alatt álló építményt foglal magába.
             </p>
         </div>
         <div class="col span-1-of-4 box">
             <i class="ion-beer icon"></i>
             <h4>Szórakozás</h4>
             <p>
-              Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can
-              also choose to order more flexibly if that's your style.
+              Závod község minden év szeptemberének második szombatján rendezi meg a nagysikerű <strong>Forgó Fesztivált</strong>. Adott a lehetőség fakanalat ragadni és megmérettetni egymással az ételeket a bográcsfőző versenyen. 
+              <br><br>
+              A falunap kulturális szórakoztatását a helyi csoportok mellett számos helyről érkező fellépő tovább színesíti. Párhuzamos programok közt rendszerint szerepel méz- és borkóstoló, az estét pedig a '60-70-es évek <strong>ismert rockzenéi</strong> zárják.
             </p>
         </div>
       </div>
@@ -344,17 +347,7 @@
     </section>
       
     <footer>
-      <div class="row">
-        <div class="col span-1-of-2">
-          <ul class="footer-nav">
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">iOS App</a></li>
-            <li><a href="#">Android App</a></li>
-          </ul>
-        </div>
-        <div class="col span-1-of-2">
+      <div class="row">        
           <ul class="social-icons">
             <li>
               <a href="#"><i class="ion-social-facebook"></i></a>
@@ -370,7 +363,6 @@
             </li>
           </ul>
         </div>
-      </div>
       <div class="row">
         <p>
           Copyright &copy; 2019 by zavod.hu<br>
@@ -378,5 +370,10 @@
         </p>
       </div>
     </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <script src="resources/js/script.js"></script>
+  
   </body>
 </html>

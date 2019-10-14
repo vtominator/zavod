@@ -29,7 +29,7 @@ body {
 }
 
 .row {
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -216,6 +216,50 @@ header {
     border-bottom: 2px solid #e67e22;
 }
 
+
+.sticky {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: rgba(255,255,255,0.98);
+    -webkit-box-shadow: 0 2px 2px #efefef;
+            box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav { 
+    margin-top: 30px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 2px 0px;
+    color: #555;
+}
+
+.sticky .logo {
+    display: none;
+}
+.sticky .logo-black {
+    display: block;
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-black {
+    display: none;
+    height: 80px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
 /* ---------------------------------------------- */
 /* SIGHTS */
 /* ---------------------------------------------- */
@@ -273,7 +317,7 @@ cite img{
 }
 
 .icon {
-    margin-top: 150px;
+    margin-top: 120px;
     font-size: 350%;
     font-weight:lighter;
     display:block;
@@ -298,9 +342,7 @@ cite img{
 /* PHOTOS */
 /* ---------------------------------------------- */
 
-.section-pictures .long-copy {
-    margin-bottom: 30px;
-}
+
 
 .pictures-showcase {
     list-style: none;
@@ -351,7 +393,7 @@ input[type=text],
 input[type=email],
 select,
 textarea {
-    width: 50%;
+    width: 100%;
     padding: 7px;
     border-radius: 3px;
     border: 1px solid #ccc;
@@ -386,7 +428,7 @@ footer {
 
 .social-icons {
     list-style: none;
-    float: right;
+    text-align: center;
 }
 
 .footer-nav li,

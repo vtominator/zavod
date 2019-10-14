@@ -1,0 +1,67 @@
+@media only screen and (max-width: 1200px) {
+    .title-text-box {
+        width: 100%;
+        padding: 0 5%;
+    }
+    
+    .row { padding: 0 5%; }  
+    .box p{ font-size: 18px;}
+}
+
+@media only screen and (max-width: 1023px) {
+    body { font-size: 16px }
+    section { padding: 60px 0;}
+    
+        
+    blockquote:before {
+        left: 220px;    
+    }
+    
+    blockquote:after {
+        left: 680px;
+    }
+    
+    cite{
+        margin-top:15px;
+    }
+    
+    .box p{ font-size: 16px;}
+    
+    
+}
+
+@media only screen and (max-width: 767px) {
+    blockquote:before {
+        left: 110px;    
+    }
+    
+    blockquote:after {
+        top: 30px;
+        left: 560px;
+    }
+    
+    cite{
+        margin-top:5px;
+    }
+    
+    cite img{    
+        height: 40px;
+    }
+    
+    .icon {
+        font-size: 250%;
+    }
+    
+    .box p{ font-size: 14px;}
+}
+
+@media only screen and (max-width: 480px) {
+    blockquote:before {
+        left: 0px;    
+    }
+    
+    blockquote:after {
+        top: 20px;
+        left: 420px;
+    }
+}
