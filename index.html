@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
     <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
     
@@ -15,16 +16,16 @@
     <title>Závod</title>
   </head>
   <body>
-    <header>
+    <header id="home">
       <nav>
         <div class="row">
           <img src="resources/img/logo.png" alt="Závod logo" class="logo" />
           <img src="resources/img/bw_logo.png" alt="Závod logo" class="logo-black" />
           <ul class="main-nav">
-            <li><a href="#">Kezdőlap</a></li>
-            <li><a href="#">Látnivalók</a></li>
-            <li><a href="#">Galéria</a></li>
-            <li><a href="#">Kapcsolat</a></li>
+            <li><a href="#home">Kezdőlap</a></li>
+            <li><a href="#sights">Látnivalók</a></li>
+            <li><a href="#pictures">Galéria</a></li>
+            <li><a href="#form">Kapcsolat</a></li>
           </ul>
         </div>
       </nav>
@@ -35,12 +36,12 @@
         <h3>
           a völgység ékszerdoboza
         </h3>
-        <a href="#" class="btn btn-full">Mutass többet</a>
-        <a href="#" class="btn btn-ghost">Kapcsolat</a>
+        <a href="#" class="btn btn-full js--scroll-to-pictures">Mutass többet</a>
+        <a href="#" class="btn btn-ghost js--scroll-to-form">Kapcsolat</a>
       </div>
     </header>
 
-    <section class="section-sights js--section-sights">
+    <section class="section-sights js--section-sights" id="sights">
       <div class="row">
         <h2>Helyi nevezetességek</h2>
         <p class="sights-text">
@@ -94,10 +95,10 @@
     </section>
 
     
-    <section class="section-pictures">
+    <section class="section-pictures js--section-pictures" id="pictures">
       <h2>A völgység Svájca</h2>
 
-      <ul class="pictures-showcase clearfix">
+      <ul class="pictures-showcase clearfix js--wp-1">
         <li>
           <figure class="photo">
             <img src="resources/img/1.jpg" alt="Závod kép 1" />
@@ -128,7 +129,7 @@
           </figure>
         </li>
       </ul>
-      <ul class="pictures-showcase clearfix">
+      <ul class="pictures-showcase clearfix js--wp-2">
         <li>
           <figure class="photo">
             <img src="resources/img/6.jpg" alt="Závod kép 6" />
@@ -159,133 +160,133 @@
           </figure>
         </li>
       </ul>
-      <ul class="pictures-showcase clearfix">
+      <ul class="pictures-showcase clearfix js--wp-3">
         <li>
           <figure class="photo">
-            <img src="resources/img/11.jpg" alt="Závod kép 6" />
+            <img src="resources/img/11.jpg" alt="Závod kép 11" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/12.jpg" alt="Závod kép 7" />
+            <img src="resources/img/12.jpg" alt="Závod kép 12" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/13.jpg" alt="Závod kép 8" />
+            <img src="resources/img/13.jpg" alt="Závod kép 13" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/14.jpg" alt="Závod kép 9" />
+            <img src="resources/img/14.jpg" alt="Závod kép 14" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/15.jpg" alt="Závod kép 10" />
+            <img src="resources/img/15.jpg" alt="Závod kép 15" />
           </figure>
         </li>
       </ul>
-      <ul class="pictures-showcase clearfix">
+      <ul class="pictures-showcase clearfix js--wp-4">
         <li>
           <figure class="photo">
-            <img src="resources/img/16.jpg" alt="Závod kép 6" />
+            <img src="resources/img/16.jpg" alt="Závod kép 16" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/17.jpg" alt="Závod kép 7" />
+            <img src="resources/img/17.jpg" alt="Závod kép 17" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/18.jpg" alt="Závod kép 8" />
+            <img src="resources/img/18.jpg" alt="Závod kép 18" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/19.jpg" alt="Závod kép 9" />
+            <img src="resources/img/19.jpg" alt="Závod kép 19" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/20.jpg" alt="Závod kép 10" />
+            <img src="resources/img/20.jpg" alt="Závod kép 20" />
           </figure>
         </li>
       </ul>
-      <ul class="pictures-showcase clearfix">
+      <ul class="pictures-showcase clearfix js--wp-5">
         <li>
           <figure class="photo">
-            <img src="resources/img/21.jpg" alt="Závod kép 6" />
+            <img src="resources/img/21.jpg" alt="Závod kép 21" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/22.jpg" alt="Závod kép 7" />
+            <img src="resources/img/22.jpg" alt="Závod kép 22" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/23.jpg" alt="Závod kép 8" />
+            <img src="resources/img/23.jpg" alt="Závod kép 23" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/24.jpg" alt="Závod kép 9" />
+            <img src="resources/img/24.jpg" alt="Závod kép 24" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/25.jpg" alt="Závod kép 10" />
+            <img src="resources/img/25.jpg" alt="Závod kép 25" />
           </figure>
         </li>
       </ul>
-      <ul class="pictures-showcase clearfix">
+      <ul class="pictures-showcase clearfix js--wp-6">
         <li>
           <figure class="photo">
-            <img src="resources/img/26.jpg" alt="Závod kép 6" />
+            <img src="resources/img/26.jpg" alt="Závod kép 26" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/27.jpg" alt="Závod kép 7" />
+            <img src="resources/img/27.jpg" alt="Závod kép 27" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/28.jpg" alt="Závod kép 8" />
+            <img src="resources/img/28.jpg" alt="Závod kép 28" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/29.jpg" alt="Závod kép 9" />
+            <img src="resources/img/29.jpg" alt="Závod kép 29" />
           </figure>
         </li>
 
         <li>
           <figure class="photo">
-            <img src="resources/img/30.jpg" alt="Závod kép 10" />
+            <img src="resources/img/30.jpg" alt="Závod kép 30" />
           </figure>
         </li>
       </ul>
     </section>
     
-    <section class="section-form">
+    <section class="section-form js--section-form" id="form">
       <div class="row">
         <h2>Önt is várjuk Závodon!</h2>
       </div>

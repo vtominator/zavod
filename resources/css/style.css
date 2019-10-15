@@ -229,7 +229,7 @@ header {
 }
 
 .sticky .main-nav { 
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .sticky .main-nav li a:link,
@@ -254,7 +254,7 @@ header {
 
 .logo-black {
     display: none;
-    height: 80px;
+    height: 50px;
     width: auto;
     float: left;
     margin: 5px 0;
@@ -491,4 +491,32 @@ footer p {
     color: #888;
     text-align: center;
     margin-top: 20px;
+}
+
+/* ---------------------------------------------- */
+/* ANIMATIONS */
+/* ---------------------------------------------- */
+
+.js--test-3{
+    animation-duration: 2s;
+}
+
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3,
+.js--wp-4,
+.js--wp-5,
+.js--wp-6 {
+    opacity: 0;
+    animation-duration: 2s;
+}
+
+.js--wp-1 .animated,
+.js--wp-2 .animated,
+.js--wp-3 .animated, 
+.js--wp-4 .animated, 
+.js--wp-5 .animated, 
+.js--wp-6 .animated{ 
+    opacity: 1;
 }
