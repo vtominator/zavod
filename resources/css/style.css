@@ -167,30 +167,24 @@ input[type=submit]:active{
 /* ---------------------------------------------- */
 
 header {
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(img/title-picture.jpg);   
+    background-image: 
+    linear-gradient(to bottom,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(img/title-picture.jpg);   
     background-size: cover;
     height: 100vh;
     background-attachment: fixed;
 }
 
-.title-text-box {
+.title-text-box  {    
     position: absolute;
     width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 12%;
 }
 
-.logo{
-    height: 120px;
-    width: auto;
-    float: left;
-    margin-top: 20px;
-}
 
 .main-nav {
     float: right;
-    list-style: none;    
+    list-style: none;
     margin-top: 55px;
 }
 
@@ -328,7 +322,6 @@ cite img{
 
 .box p{
     line-height: 145%;
-    text-align: justify;
 }
 
 .box p a:hover,
@@ -494,29 +487,66 @@ footer p {
 }
 
 /* ---------------------------------------------- */
+/* VIDEO */
+/* ---------------------------------------------- */
+.video-text-box {        
+    position: relative;  
+    text-align: justify;
+    line-height: 145%;
+    font-size: 130%;
+    color: white;
+  }
+
+.video-text {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 30%;
+    height:98%;
+    padding: 80px 50px;
+  }
+
+.myVideo {
+    width: 100%;
+    max-height: 85vh;
+    object-fit: cover;
+  }
+
+
+/* ---------------------------------------------- */
 /* ANIMATIONS */
 /* ---------------------------------------------- */
 
-.js--test-3{
-    animation-duration: 2s;
-}
 
-
-.js--wp-1,
 .js--wp-2,
 .js--wp-3,
 .js--wp-4,
-.js--wp-5,
-.js--wp-6 {
+.js--wp-5 {
+    visibility: hidden;
+}
+
+.slideInRight {    
+    visibility: visible;
+}
+
+.js--wp-1,
+.js--wp-6,
+.js--wp-7,
+.js--wp-8,
+.js--wp-9,
+.js--wp-10,
+.js--wp-11 {
     opacity: 0;
     animation-duration: 2s;
 }
 
 .js--wp-1 .animated,
-.js--wp-2 .animated,
-.js--wp-3 .animated, 
-.js--wp-4 .animated, 
-.js--wp-5 .animated, 
-.js--wp-6 .animated{ 
+.js--wp-6 .animated,
+.js--wp-7 .animated,
+.js--wp-8 .animated, 
+.js--wp-9 .animated, 
+.js--wp-10 .animated, 
+.js--wp-11 .animated{ 
     opacity: 1;
 }
