@@ -18,7 +18,7 @@
     }
     
     blockquote:after {
-        left: 680px;
+        left: 660px;
     }
     
     cite{
@@ -37,7 +37,7 @@
     
     blockquote:after {
         top: 30px;
-        left: 560px;
+        left: 550px;
     }
     
     cite{
@@ -53,6 +53,31 @@
     }
     
     .box p{ font-size: 14px;}
+    
+    .main-nav {display:none}
+    .mobile-nav-icon{display:inline-block;}
+    .main-nav{
+        float:left;
+        margin-top:20px;
+        margin-left: 25px;
+    }
+    .main-nav li {display: block;}
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 5px 0;
+        font-size: 120%;
+    }
+    
+    .sticky .main-nav { margin-top: 5px; }
+    .sticky .mobile-nav-icon  { margin-top: 20px}
+    .sticky .mobile-nav-icon i { color: #555}
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {padding: 5px 0px;}
+    
+    
+    
 }
 
 @media only screen and (max-width: 480px) {
