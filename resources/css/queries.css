@@ -1,92 +1,204 @@
 @media only screen and (max-width: 1200px) {
-    .title-text-box {
-        width: 100%;
-        padding: 0 5%;
-    }
-    
-    .row { padding: 0 5%; }  
-    .box p{ font-size: 18px;}
+  .row {
+    padding: 0 2%;
+  }
+
+  .title-text-box {
+    width: 100%;
+    padding: 0 2%;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  h1 {
+    font-size: 135px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
-    body { font-size: 16px }
-    section { padding: 60px 0;}
-    
-        
-    blockquote:before {
-        left: 220px;    
-    }
-    
-    blockquote:after {
-        left: 660px;
-    }
-    
-    cite{
-        margin-top:15px;
-    }
-    
-    .box p{ font-size: 16px;}
-    
-    
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 100px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 10px 17px !important;
+  }
+
+  blockquote:before {
+    font-size: 200%;
+    left: 15%;
+  }
+
+  blockquote:after {
+    font-size: 200%;
+    top: 30px;
+    left: 83%;
+  }
+
+  cite {
+    top: 60px;
+  }
+
+  cite img {
+    height: 40px;
+  }
+
+  .icon {
+    font-size: 200%;
+  }
+
+  .box p {
+    font-size: 14.5px;
+  }
+
+  .video-text {
+    padding: 40px 20px;
+    font-size: 80%;
+  }
+
+  .contact-form {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    blockquote:before {
-        left: 110px;    
-    }
-    
-    blockquote:after {
-        top: 30px;
-        left: 550px;
-    }
-    
-    cite{
-        margin-top:5px;
-    }
-    
-    cite img{    
-        height: 40px;
-    }
-    
-    .icon {
-        font-size: 250%;
-    }
-    
-    .box p{ font-size: 14px;}
-    
-    .main-nav {display:none}
-    .mobile-nav-icon{display:inline-block;}
-    .main-nav{
-        float:left;
-        margin-top:20px;
-        margin-left: 25px;
-    }
-    .main-nav li {display: block;}
-    .main-nav li a:link,
-    .main-nav li a:visited {
-        display: block;
-        border: 0;
-        padding: 5px 0;
-        font-size: 120%;
-    }
-    
-    .sticky .main-nav { margin-top: 5px; }
-    .sticky .mobile-nav-icon  { margin-top: 20px}
-    .sticky .mobile-nav-icon i { color: #555}
-    .sticky .main-nav li a:link,
-    .sticky .main-nav li a:visited {padding: 5px 0px;}
-    
-    
-    
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 100px;
+  }
+
+  .mobile-nav-icon {
+    display: inline-block;
+  }
+
+  .main-nav {
+    display: none;
+    float: left;
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+
+  .main-nav li {
+    display: block;
+  }
+
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    display: block;
+    border: 0;
+    padding: 5px 0;
+    font-size: 120%;
+  }
+
+  .sticky .main-nav {
+    margin-top: 5px;
+  }
+
+  .sticky .mobile-nav-icon {
+    margin-top: 20px;
+  }
+
+  .sticky .mobile-nav-icon i {
+    color: #555;
+  }
+
+  .sticky .main-nav li a:link,
+  .sticky .main-nav li a:visited {
+    padding: 5px 0px;
+  }
+
+  blockquote:before {
+    left: 5%;
+    top: -5px;
+  }
+
+  blockquote:after {
+    left: 92%;
+  }
+
+  .col {
+      width: 50%;
+      padding: 0 10px;
+      margin: 0 auto;
+  }
+
+  .video-text {
+    padding: 20px 20px;
+    font-size: 68%;
+  }
+
+  .pictures-showcase li {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+
+  cite {
+    margin-top: 5px;
+  }
+
+  cite img {
+    height: 30px;
+  }
+
+  .icon {
+    font-size: 250%;
+  }
+
+  .box p {
+    font-size: 90%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    blockquote:before {
-        left: 0px;    
-    }
-    
-    blockquote:after {
-        top: 20px;
-        left: 420px;
-    }
+  blockquote:before {
+    left: -3vw;
+  }
+  blockquote:after {
+    top: 5vw;
+    left: 50vw;
+  }
+
+  cite {
+    top: 10vw;
+  }
+
+  .icon {
+    margin-top: 50px;
+  }
+
+  .video-text-container {
+    height: 98.5%;
+    padding: 10px 10px;
+  }
+
+  .video-text {
+    margin-top: 60%;
+    font-size: 68%;
+  }
+
+  input[type="checkbox"] {
+    zoom: 1;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .button {
+    display: block;
+    margin: 0 25%;
+  }
 }
