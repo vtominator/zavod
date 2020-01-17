@@ -1,11 +1,6 @@
 @media only screen and (max-width: 1200px) {
-  .row {
-    padding: 0 2%;
-  }
-
   .title-text-box {
     width: 100%;
-    padding: 0 2%;
   }
 
   section {
@@ -70,7 +65,46 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  body {
+    font-size: 16px;
+  }
+
+  section:first-of-type {
+    padding-top: 60px;
+  }
+
+  section {
+    padding: 30px 0;
+  }
+
+  .title-text-box {
+    top: 60%;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  blockquote:before {
+    left: 15%;
+    top: -5px;
+  }
+
+  blockquote:after {
+    left: 83%;
+  }
+
+  .box p {
+    font-size: 14px;
+  }
+
+  .video-text-container {
+    height: 99%;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
   body {
     font-size: 16px;
   }
@@ -79,44 +113,12 @@
     font-size: 100px;
   }
 
-  .mobile-nav-icon {
-    display: inline-block;
-  }
-
-  .main-nav {
-    display: none;
-    float: left;
-    margin-top: 30px;
-    margin-left: 0px;
+  .logo {
+    height: 80px;
   }
 
   .main-nav li {
-    display: block;
-  }
-
-  .main-nav li a:link,
-  .main-nav li a:visited {
-    display: block;
-    border: 0;
-    padding: 5px 0;
-    font-size: 120%;
-  }
-
-  .sticky .main-nav {
-    margin-top: 5px;
-  }
-
-  .sticky .mobile-nav-icon {
-    margin-top: 20px;
-  }
-
-  .sticky .mobile-nav-icon i {
-    color: #555;
-  }
-
-  .sticky .main-nav li a:link,
-  .sticky .main-nav li a:visited {
-    padding: 5px 0px;
+    margin-left: 20px;
   }
 
   blockquote:before {
@@ -129,9 +131,9 @@
   }
 
   .col {
-      width: 50%;
-      padding: 0 10px;
-      margin: 0 auto;
+    width: 50%;
+    padding: 0 10px;
+    margin: 0 auto;
   }
 
   .video-text {
@@ -163,29 +165,87 @@
 }
 
 @media only screen and (max-width: 480px) {
-  blockquote:before {
-    left: -3vw;
+  section:first-of-type {
+    padding-top: 40px;
   }
+
+  section {
+    padding: 20px 0;
+  }
+
+  .section-sights .row:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  blockquote:before {
+    left: 2%;
+    top: -5px;
+  }
+
+  blockquote {
+    font-size: 13px;
+  }
+
   blockquote:after {
-    top: 5vw;
-    left: 50vw;
+    left: 97%;
   }
 
   cite {
-    top: 10vw;
+    font-size: 12px;
+    top: 50px;
   }
 
   .icon {
     margin-top: 50px;
   }
 
-  .video-text-container {
-    height: 98.5%;
-    padding: 10px 10px;
+  .mobile-nav-icon {
+    display: inline-block;
+  }
+
+  .main-nav {
+    width: 50%;
+    display: none;
+    float: left;
+    margin: 30px 30px 0px 30px;
+  }
+
+  .main-nav li {
+    display: inline-block;
+  }
+
+  .main-nav li:last-child a {
+    margin-left: 10px;
+  }
+
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    display: block;
+    border: 0;
+    padding: 5px 0;
+    font-size: 120%;
+  }
+
+  .sticky .main-nav {
+    display: inline-block;
+    margin-top: 5px;
+  }
+
+  .sticky .mobile-nav-icon {
+    margin-top: 20px;
+  }
+
+  .sticky .mobile-nav-icon i {
+    color: #555;
+  }
+
+  .sticky .main-nav li a:link,
+  .sticky .main-nav li a:visited {
+    padding: 5px 0px;
   }
 
   .video-text {
-    margin-top: 60%;
+    padding: 10px;
     font-size: 68%;
   }
 
@@ -199,6 +259,52 @@
 
   .button {
     display: block;
-    margin: 0 25%;
+    margin: 0 auto;
+  }
+
+  .video-text-container {
+    height: 98%;
+  }
+
+  .video-text {
+    padding: 5px;
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .main-nav li:last-child a {
+    margin-left: 10px;
+  }
+
+  .main-nav li {
+    font-size: 14px;
+  }
+
+  cite {
+    font-size: 12px;
+    top: 70px;
+  }
+
+  .icon {
+    margin-top: 30px;
+  }
+
+  .box p {
+    font-size: 83%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: 13px;
+  }
+
+  .main-nav {
+    margin: 25px 0 0 0;
+  }
+
+  .main-nav li:last-child a {
+    margin-left: 0px;
   }
 }

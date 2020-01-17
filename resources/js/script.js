@@ -1,10 +1,38 @@
+DOMStrings = {
+  section_sights: ".js--section-sights",
+  section_pictures: ".js--section-pictures",
+  section_form: ".js--section-form",
+  navigationIcon: ".js--nav-icon i",
+  navigationBar: ".js--main-nav",
+  scroll_pictures: ".js--scroll-to-pictures",
+  scroll_form: ".js--scroll-to-form",
+
+  title_wp: ".js--wp-1",
+  sights_wp_1: ".js--wp-2",
+  sights_wp_2: ".js--wp-3",
+  sights_wp_3: ".js--wp-4",
+  sights_wp_4: ".js--wp-5",
+  pictures_wp_1: ".js--wp-6",
+  pictures_wp_2: ".js--wp-7",
+  pictures_wp_3: ".js--wp-8",
+  pictures_wp_4: ".js--wp-9",
+  pictures_wp_5: ".js--wp-10",
+  pictures_wp_6: ".js--wp-11",
+  
+
+  navigation: "nav",
+  sticky: "sticky",
+  hamburger_icon: "ion-navicon-round",
+  close_icon: "ion-close-round"
+};
+
 $(document).ready(function() {
-  $(".js--section-sights").waypoint(
+  $(DOMStrings.section_sights).waypoint(
     function(direction) {
       if (direction == "down") {
-        $("nav").addClass("sticky");
+        $(DOMStrings.navigation).addClass(DOMStrings.sticky);
       } else {
-        $("nav").removeClass("sticky");
+        $(DOMStrings.navigation).removeClass(DOMStrings.sticky);
       }
     },
     {
@@ -12,30 +40,39 @@ $(document).ready(function() {
     }
   );
 
-  
-  
-  $('.js--nav-icon').click(function(){
-    var nav = $('.js--main-nav');
-    var icon = $('.js--nav-icon i');
-    
-    nav.slideToggle(200);
-    if(icon.hasClass('ion-navicon-round')){
-        icon.addClass('ion-close-round');
-        icon.removeClass('ion-navicon-round');
+  window.onresize = function() {
+    let width = $(window).width() + 17;
+    const navigationBar = $(DOMStrings.navigationBar);
+    const navigationIcon = $(DOMStrings.navigationIcon);
+
+    if (width > 480 || navigationIcon.hasClass(DOMStrings.close_icon)) {
+      navigationBar.css("display", "block");
     } else {
-     icon.addClass('ion-navicon-round');
-     icon.removeClass('ion-close-round');
+      navigationBar.css("display", "none");
     }
- });  
-  
-  
-  
-  
-  $(".js--scroll-to-pictures").click(function() {
-    $("html, body").animate({ scrollTop: $(".js--section-pictures").offset().top }, 1000);
+  };
+
+  $(DOMStrings.navigationIcon).click(function() {
+    const navigationBar = $(DOMStrings.navigationBar);
+    const navigationIcon = $(this);
+
+    navigationBar.slideToggle(200);
+
+    if (navigationIcon.hasClass(DOMStrings.hamburger_icon)) {
+      navigationIcon.addClass(DOMStrings.close_icon);
+      navigationIcon.removeClass(DOMStrings.hamburger_icon);
+    } else {
+      navigationIcon.addClass(DOMStrings.hamburger_icon);
+      navigationIcon.removeClass(DOMStrings.close_icon);
+    }
   });
-  $(".js--scroll-to-form").click(function() {
-    $("html, body").animate({ scrollTop: $(".js--section-form").offset().top }, 1000);
+
+  $(DOMStrings.scroll_pictures).click(function() {
+    $("html, body").animate({ scrollTop: $(DOMStrings.section_pictures).offset().top }, 1000);
+  });
+
+  $(DOMStrings.scroll_form).click(function() {
+    $("html, body").animate({ scrollTop: $(DOMStrings.section_form).offset().top }, 1000);
   });
 
   // Select all links with hashes
@@ -50,7 +87,7 @@ $(document).ready(function() {
         location.hostname == this.hostname
       ) {
         // Figure out element to scroll to
-        var target = $(this.hash);
+        let target = $(this.hash);
         target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
         // Does a scroll target exist?
         if (target.length) {
@@ -64,7 +101,7 @@ $(document).ready(function() {
             function() {
               // Callback after animation
               // Must change focus!
-              var $target = $(target);
+              let $target = $(target);
               $target.focus();
               if ($target.is(":focus")) {
                 // Checking if the target was focused
@@ -79,79 +116,80 @@ $(document).ready(function() {
       }
     });
 
-    $(".js--wp-1").waypoint(
-      function(direction) {
-        $(".js--wp-1").addClass("animated fadeInDown");
-      },
-      {
-        offset: "80%"
-      }
-    );
-    
-    
-    $(".js--wp-2").waypoint(function(direction){
-      var element =  document.querySelector('.js--wp-2');
-      element.classList.add('animated', 'slideInRight');
-      element.addEventListener('animationend', function(){
-        var element =  document.querySelector('.js--wp-3');
-        element.classList.add('animated', 'slideInRight');
-        element.addEventListener('animationend', function(){
-          var element =  document.querySelector('.js--wp-4');
-          element.classList.add('animated', 'slideInRight');
-          element.addEventListener('animationend', function(){
-            var element =  document.querySelector('.js--wp-5');
-            element.classList.add('animated', 'slideInRight');
-          })
-          })    
-      })
-      
-    },{
-      offset: "60%"
-    });
+  $(DOMStrings.title_wp).waypoint(     
+    function() {      
+      $(DOMStrings.title_wp).addClass("animated fadeInDown");
+    },
+    {
+      offset: "80%"
+    }
+  );
 
-  $(".js--wp-6").waypoint(
-    function(direction) {
-      $(".js--wp-6").addClass("animated fadeIn");
+  $(DOMStrings.sights_wp_1).waypoint(
+    function() {
+      const element = document.querySelector(DOMStrings.sights_wp_1);
+      element.classList.add("animated", "slideInRight");
+      element.addEventListener("animationend", function() {
+        const element = document.querySelector(DOMStrings.sights_wp_2);
+        element.classList.add("animated", "slideInRight");
+        element.addEventListener("animationend", function() {
+          const element = document.querySelector(DOMStrings.sights_wp_3);
+          element.classList.add("animated", "slideInRight");
+          element.addEventListener("animationend", function() {
+            const element = document.querySelector(DOMStrings.sights_wp_4);
+            element.classList.add("animated", "slideInRight");
+          });
+        });
+      });
+    },
+    {
+      offset: "60%"
+    }
+  );
+
+  $(DOMStrings.pictures_wp_1).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_1).addClass("animated fadeIn");
     },
     {
       offset: "80%"
     }
   );
-  $(".js--wp-7").waypoint(
-    function(direction) {
-      $(".js--wp-7").addClass("animated fadeIn");
+  $(DOMStrings.pictures_wp_2).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_2).addClass("animated fadeIn");
     },
     {
       offset: "80%"
     }
   );
-  $(".js--wp-8").waypoint(
-    function(direction) {
-      $(".js--wp-8").addClass("animated fadeIn");
+  $(DOMStrings.pictures_wp_3).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_3).addClass("animated fadeIn");
     },
     {
       offset: "80%"
     }
   );
-  $(".js--wp-9").waypoint(
-    function(direction) {
-      $(".js--wp-9").addClass("animated fadeIn");
+  $(DOMStrings.pictures_wp_4).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_4).addClass("animated fadeIn");
     },
     {
       offset: "80%"
     }
   );
-  $(".js--wp-10").waypoint(
-    function(direction) {
-      $(".js--wp-10").addClass("animated fadeIn");
+  $(DOMStrings.pictures_wp_5).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_5).addClass("animated fadeIn");
     },
     {
       offset: "80%"
     }
   );
-  $(".js--wp-11").waypoint(
-    function(direction) {
-      $(".js--wp-11").addClass("animated fadeIn");
+  $(DOMStrings.pictures_wp_6).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_6).addClass("animated fadeIn");
     },
     {
       offset: "80%"

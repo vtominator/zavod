@@ -32,6 +32,7 @@ body {
 .row {
   max-width: 1140px;
   margin: 0 auto;
+  padding: 0 2%;
 }
 
 section:first-of-type {
@@ -178,7 +179,7 @@ header {
 .title-text-box {
   position: absolute;
   width: 1140px;
-  padding: 0 2%;
+  padding: 0 5%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -224,7 +225,7 @@ header {
 }
 
 .sticky .main-nav {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .sticky .main-nav li a:link,
@@ -263,9 +264,10 @@ header {
 }
 
 .mobile-nav-icon i {
-  font-size: 200%;
+  font-size: 160%;
   color: #fff;
 }
+
 /* ---------------------------------------------- */
 /* SIGHTS */
 /* ---------------------------------------------- */
@@ -334,6 +336,7 @@ cite img {
 .box p {
   text-align: justify;
   line-height: 145%;
+  font-size: 22px;
 }
 
 .box p a:hover,
@@ -343,6 +346,41 @@ cite img {
   font-weight: bold;
   text-decoration: none;
 }
+
+/* ---------------------------------------------- */
+/* VIDEO */
+/* ---------------------------------------------- */
+
+.video-container {
+  position: relative;
+  height: 500%;
+}
+
+.video-file {
+  width: 100%;
+  max-height: 85vh;
+  object-fit: cover;
+}
+
+.video-text-container {
+  position: absolute;
+  width: 30%;
+  height: 99%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-text {
+  position: absolute;
+  top: 50%;
+  padding: 80px 50px;
+  transform: translateY(-50%);
+  text-align: justify;
+  line-height: 145%;
+  color: white;
+}
+
 /* ---------------------------------------------- */
 /* PHOTOS */
 /* ---------------------------------------------- */
@@ -494,39 +532,6 @@ footer p {
   color: #888;
   text-align: center;
   margin-top: 20px;
-}
-
-/* ---------------------------------------------- */
-/* VIDEO */
-/* ---------------------------------------------- */
-.video-container {
-  position: relative;
-  height: 500%;
-}
-
-.video-file {
-  width: 100%;
-  max-height: 85vh;
-  object-fit: cover;
-}
-
-.video-text-container {
-  position: absolute;
-  width: 30%;
-  height: 99.5%;
-  top: 0px;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.video-text {
-  position: absolute;
-  top: 50%;
-  padding: 80px 50px;
-  transform: translateY(-50%);
-  text-align: justify;
-  line-height: 145%;
-  color: white;
 }
 
 /* ---------------------------------------------- */
