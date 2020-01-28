@@ -170,6 +170,8 @@ input[type="submit"]:active {
 /* ---------------------------------------------- */
 
 header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))),
+    url(img/title-picture.jpg);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/title-picture.jpg);
   background-size: cover;
   height: 100vh;
@@ -182,6 +184,7 @@ header {
   padding: 0 2%;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -219,7 +222,6 @@ header {
   left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.98);
-  -webkit-box-shadow: 0 2px 2px #efefef;
   box-shadow: 0 2px 2px #efefef;
   z-index: 9999;
 }
@@ -290,7 +292,7 @@ blockquote {
 
 blockquote:before {
   top: 10px;
-  left: 22%;
+  left: 10%;
   display: block;
   position: absolute;
   content: "\201C";
@@ -301,9 +303,10 @@ blockquote:after {
   display: block;
   position: absolute;
   top: 40px;
-  left: 77%;
+  left: 87%;
   content: "\201C";
   font-size: 300%;
+  -webkit-transform: scale(-1);
   transform: scale(-1);
 }
 
@@ -314,6 +317,7 @@ cite {
   left: 50%;
   font-size: 90%;
   margin-top: 25px;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -359,6 +363,7 @@ cite img {
 .video-file {
   width: 100%;
   max-height: 85vh;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -375,6 +380,7 @@ cite img {
   position: absolute;
   top: 50%;
   padding: 80px 50px;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   text-align: justify;
   line-height: 145%;
@@ -387,7 +393,7 @@ cite img {
 
 .pictures-showcase {
   list-style: none;
-  widows: 100%;
+  width: 100%;
 }
 
 .pictures-showcase li {
@@ -557,6 +563,7 @@ footer p {
 .js--wp-10,
 .js--wp-11 {
   opacity: 0;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 

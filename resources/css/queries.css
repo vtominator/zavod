@@ -10,6 +10,18 @@
   h1 {
     font-size: 135px;
   }
+
+  blockquote:before {
+    font-size: 200%;
+    left: 8%;
+    top: -2px;
+  }
+
+  blockquote:after {
+    font-size: 200%;
+    top: 30px;
+    left: 90%;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -30,13 +42,13 @@
 
   blockquote:before {
     font-size: 200%;
-    left: 15%;
+    left: 0%;
   }
 
   blockquote:after {
     font-size: 200%;
     top: 30px;
-    left: 83%;
+    left: 98%;
   }
 
   cite {
@@ -204,12 +216,12 @@
   }
 
   blockquote:after {
-    left: 97%;
+    left: 84%;
   }
 
   cite {
     font-size: 12px;
-    top: 50px;
+    top: 70px;
   }
 
   .icon {
@@ -323,6 +335,15 @@
 
   h3 {
     font-size: 11px;
+  }
+
+  blockquote:after {
+    top: 40px;
+    left: 67%;
+  }
+
+  cite {
+    font-size: 8px;
   }
 
   .btn-full:link,
