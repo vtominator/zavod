@@ -13,6 +13,15 @@ DOMStrings = {
   pictures_wp_4: ".js--wp-9",
   pictures_wp_5: ".js--wp-10",
   pictures_wp_6: ".js--wp-11",
+  pictures_wp_7: ".js--wp-12",
+  pictures_wp_8: ".js--wp-13",
+  pictures_wp_9: ".js--wp-14",
+  pictures_wp_10: ".js--wp-15",
+  pictures_wp_11: ".js--wp-16",
+  pictures_wp_12: ".js--wp-17",
+  pictures_wp_13: ".js--wp-18",
+  pictures_wp_14: ".js--wp-19",
+  pictures_wp_15: ".js--wp-20",
   sights_wp_1: ".js--wp-2",
   sights_wp_2: ".js--wp-3",
   sights_wp_3: ".js--wp-4",
@@ -23,21 +32,67 @@ DOMStrings = {
   sticky: "sticky",
   hamburger_icon: "ion-navicon-round",
   close_icon: "ion-close-round",
-  pictures_list: ".pictures-showcase"
+  pictures_section: ".section-pictures",
+  pictures_list: ".js--wp-"
 };
 
-(function() {
-  const element = DOMStrings.pictures_list;
+{
+  if (window.innerWidth > 1024) {
+    const section = DOMStrings.pictures_section;
+    const currentList = DOMStrings.pictures_list;
 
-  let f = console.log();
+    document.querySelector(section).insertAdjacentHTML("beforeend", "");
+    let waypointID = 6;
+    let currentWaypoint = 5;
 
-  for (let i = 1; i <= 30; i++) {
-    html = '<li><figure class="photo"><img src="resources/img/%i%.jpg" alt="Závod kép %i%" /></figure></li>';
+    for (let i = 1; i <= 30; i++) {
+      if (i % 5 == 1) {
+        html = '<ul class="pictures-showcase clearfix js--wp-%id%"></ul>';
+        html = html.replace(/%id%/g, waypointID);
+        document.querySelector(section).insertAdjacentHTML("beforeend", html);
+        waypointID++;
+      }
+    }
 
-    html = html.replace("%i%", i);
-    document.querySelector(element).insertAdjacentHTML("beforeend", html);
+    for (let i = 1; i <= 30; i++) {
+      if (i % 5 == 1) {
+        currentWaypoint++;
+        console.log(currentWaypoint);
+      }
+
+      html = '<li><figure class="photo"><img src="resources/img/%i%.jpg" alt="Závod kép %i%" /></figure></li>';
+      html = html.replace(/%i%/g, i);
+      document.querySelector(currentList + currentWaypoint).insertAdjacentHTML("beforeend", html);
+    }
+  } else {
+    const section = DOMStrings.pictures_section;
+    const currentList = DOMStrings.pictures_list;
+
+    document.querySelector(section).insertAdjacentHTML("beforeend", "");
+    let waypointID = 6;
+    let currentWaypoint = 5;
+
+    for (let i = 1; i <= 30; i++) {
+      if (i % 2 == 1) {
+        html = '<ul class="pictures-showcase clearfix js--wp-%id%"></ul>';
+        html = html.replace(/%id%/g, waypointID);
+        document.querySelector(section).insertAdjacentHTML("beforeend", html);
+        waypointID++;
+      }
+    }
+
+    for (let i = 1; i <= 30; i++) {
+      if (i % 2 == 1) {
+        currentWaypoint++;
+        console.log(currentWaypoint);
+      }
+
+      html = '<li><figure class="photo"><img src="resources/img/%i%.jpg" alt="Závod kép %i%" /></figure></li>';
+      html = html.replace(/%i%/g, i);
+      document.querySelector(currentList + currentWaypoint).insertAdjacentHTML("beforeend", html);
+    }
   }
-})();
+}
 
 $(document).ready(function() {
   $(DOMStrings.section_sights).waypoint(
@@ -203,6 +258,78 @@ $(document).ready(function() {
   $(DOMStrings.pictures_wp_6).waypoint(
     function() {
       $(DOMStrings.pictures_wp_6).addClass("animated fadeIn");
+    },
+    {
+      offset: "80%"
+    }
+  );
+  $(DOMStrings.pictures_wp_7).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_7).addClass("animated fadeIn");
+    },
+    {
+      offset: "80%"
+    }
+  );
+  $(DOMStrings.pictures_wp_8).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_8).addClass("animated fadeIn");
+    },
+    {
+      offset: "80%"
+    }
+  );
+  $(DOMStrings.pictures_wp_9).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_9).addClass("animated fadeIn");
+    },
+    {
+      offset: "80%"
+    }
+  );
+  $(DOMStrings.pictures_wp_10).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_10).addClass("animated fadeIn");
+    },
+    {
+      offset: "80%"
+    }
+  );
+  $(DOMStrings.pictures_wp_11).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_11).addClass("animated fadeIn");
+    },
+    {
+      offset: "80%"
+    }
+  );
+  $(DOMStrings.pictures_wp_12).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_12).addClass("animated fadeIn");
+    },
+    {
+      offset: "80%"
+    }
+  );
+  $(DOMStrings.pictures_wp_13).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_13).addClass("animated fadeIn");
+    },
+    {
+      offset: "80%"
+    }
+  );
+  $(DOMStrings.pictures_wp_14).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_14).addClass("animated fadeIn");
+    },
+    {
+      offset: "80%"
+    }
+  );
+  $(DOMStrings.pictures_wp_15).waypoint(
+    function() {
+      $(DOMStrings.pictures_wp_15).addClass("animated fadeIn");
     },
     {
       offset: "80%"

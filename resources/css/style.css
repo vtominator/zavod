@@ -561,7 +561,16 @@ footer p {
 .js--wp-8,
 .js--wp-9,
 .js--wp-10,
-.js--wp-11 {
+.js--wp-11,
+.js--wp-12,
+.js--wp-13,
+.js--wp-14,
+.js--wp-15,
+.js--wp-16,
+.js--wp-17,
+.js--wp-18,
+.js--wp-19,
+.js--wp-20{
   opacity: 0;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
@@ -573,6 +582,15 @@ footer p {
 .js--wp-8 .animated,
 .js--wp-9 .animated,
 .js--wp-10 .animated,
-.js--wp-11 .animated {
+.js--wp-11 .animated,
+.js--wp-12 .animated,
+.js--wp-13 .animated,
+.js--wp-14 .animated,
+.js--wp-15 .animated,
+.js--wp-16 .animated,
+.js--wp-17 .animated,
+.js--wp-18 .animated,
+.js--wp-19 .animated,
+.js--wp-20 .animated {
   opacity: 1;
 }
