@@ -37,7 +37,27 @@ DOMStrings = {
 };
 
 {
-  if (window.innerWidth > 1024) {
+  let rtime;
+  let timeout = false;
+  const delta = 200;
+  $(window).resize(() => {
+    let rtime = new Date();
+    if (timeout === false) {
+      timeout = true;
+      setTimeout(resizeend, delta);
+    }
+  });
+
+  function resizeend() {
+    if (new Date() - rtime < delta) {
+      setTimeout(resizeend, delta);
+    } else {
+      timeout = false;
+      location.reload();
+    }
+  }
+
+  if (window.innerWidth >= 1024) {
     const section = DOMStrings.pictures_section;
     const currentList = DOMStrings.pictures_list;
 
@@ -57,10 +77,10 @@ DOMStrings = {
     for (let i = 1; i <= 30; i++) {
       if (i % 5 == 1) {
         currentWaypoint++;
-        console.log(currentWaypoint);
       }
 
-      html = '<li><figure class="photo"><img src="resources/img/%i%.jpg" alt="Závod kép %i%" /></figure></li>';
+      html =
+        '<li><figure class="photo"><picture><source srcset="resources/img/webp/%i%.webp" type="image/webp"><source srcset="resources/img/webp/%i%.jpeg" type="image/jpeg"><img src="resources/img/%i%.jpg" alt="Závod kép %i%" ></picture></figure></li>';
       html = html.replace(/%i%/g, i);
       document.querySelector(currentList + currentWaypoint).insertAdjacentHTML("beforeend", html);
     }
@@ -84,7 +104,6 @@ DOMStrings = {
     for (let i = 1; i <= 30; i++) {
       if (i % 2 == 1) {
         currentWaypoint++;
-        console.log(currentWaypoint);
       }
 
       html = '<li><figure class="photo"><img src="resources/img/%i%.jpg" alt="Závod kép %i%" /></figure></li>';
@@ -94,9 +113,9 @@ DOMStrings = {
   }
 }
 
-$(document).ready(function() {
+$(document).ready(() => {
   $(DOMStrings.section_sights).waypoint(
-    function(direction) {
+    direction => {
       if (direction == "down") {
         $(DOMStrings.navigationBar).addClass(DOMStrings.sticky);
       } else {
@@ -108,7 +127,7 @@ $(document).ready(function() {
     }
   );
 
-  window.onresize = function() {
+  window.onresize = () => {
     let width = $(window).width() + 17;
     const navigationBarElements = $(DOMStrings.navigationBarElements);
     const navigationIcon = $(DOMStrings.navigationIcon);
@@ -135,11 +154,11 @@ $(document).ready(function() {
     }
   });
 
-  $(DOMStrings.scroll_pictures).click(function() {
+  $(DOMStrings.scroll_pictures).click(() => {
     $("html, body").animate({ scrollTop: $(DOMStrings.section_pictures).offset().top }, 1000);
   });
 
-  $(DOMStrings.scroll_form).click(function() {
+  $(DOMStrings.scroll_form).click(() => {
     $("html, body").animate({ scrollTop: $(DOMStrings.section_form).offset().top }, 1000);
   });
 
@@ -156,7 +175,7 @@ $(document).ready(function() {
       ) {
         // Figure out element to scroll to
         let target = $(this.hash);
-        target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+        target = target.length ? target : $(`[name=${this.hash.slice(1)}]`);
         // Does a scroll target exist?
         if (target.length) {
           // Only prevent default if animation is actually gonna happen
@@ -166,7 +185,7 @@ $(document).ready(function() {
               scrollTop: target.offset().top
             },
             1000,
-            function() {
+            () => {
               // Callback after animation
               // Must change focus!
               let $target = $(target);
@@ -185,7 +204,7 @@ $(document).ready(function() {
     });
 
   $(DOMStrings.title_wp).waypoint(
-    function() {
+    () => {
       $(DOMStrings.title_wp).addClass("animated fadeInDown");
     },
     {
@@ -194,16 +213,16 @@ $(document).ready(function() {
   );
 
   $(DOMStrings.sights_wp_1).waypoint(
-    function() {
+    () => {
       const element = document.querySelector(DOMStrings.sights_wp_1);
       element.classList.add("animated", "slideInRight");
-      element.addEventListener("animationend", function() {
+      element.addEventListener("animationend", () => {
         const element = document.querySelector(DOMStrings.sights_wp_2);
         element.classList.add("animated", "slideInRight");
-        element.addEventListener("animationend", function() {
+        element.addEventListener("animationend", () => {
           const element = document.querySelector(DOMStrings.sights_wp_3);
           element.classList.add("animated", "slideInRight");
-          element.addEventListener("animationend", function() {
+          element.addEventListener("animationend", () => {
             const element = document.querySelector(DOMStrings.sights_wp_4);
             element.classList.add("animated", "slideInRight");
           });
@@ -216,7 +235,7 @@ $(document).ready(function() {
   );
 
   $(DOMStrings.pictures_wp_1).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_1).addClass("animated fadeIn");
     },
     {
@@ -224,7 +243,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_2).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_2).addClass("animated fadeIn");
     },
     {
@@ -232,7 +251,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_3).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_3).addClass("animated fadeIn");
     },
     {
@@ -240,7 +259,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_4).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_4).addClass("animated fadeIn");
     },
     {
@@ -248,7 +267,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_5).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_5).addClass("animated fadeIn");
     },
     {
@@ -256,7 +275,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_6).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_6).addClass("animated fadeIn");
     },
     {
@@ -264,7 +283,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_7).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_7).addClass("animated fadeIn");
     },
     {
@@ -272,7 +291,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_8).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_8).addClass("animated fadeIn");
     },
     {
@@ -280,7 +299,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_9).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_9).addClass("animated fadeIn");
     },
     {
@@ -288,7 +307,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_10).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_10).addClass("animated fadeIn");
     },
     {
@@ -296,7 +315,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_11).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_11).addClass("animated fadeIn");
     },
     {
@@ -304,7 +323,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_12).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_12).addClass("animated fadeIn");
     },
     {
@@ -312,7 +331,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_13).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_13).addClass("animated fadeIn");
     },
     {
@@ -320,7 +339,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_14).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_14).addClass("animated fadeIn");
     },
     {
@@ -328,7 +347,7 @@ $(document).ready(function() {
     }
   );
   $(DOMStrings.pictures_wp_15).waypoint(
-    function() {
+    () => {
       $(DOMStrings.pictures_wp_15).addClass("animated fadeIn");
     },
     {
