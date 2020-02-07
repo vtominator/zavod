@@ -37,26 +37,6 @@ DOMStrings = {
 };
 
 {
-  let rtime;
-  let timeout = false;
-  const delta = 200;
-  $(window).resize(() => {
-    let rtime = new Date();
-    if (timeout === false) {
-      timeout = true;
-      setTimeout(resizeend, delta);
-    }
-  });
-
-  function resizeend() {
-    if (new Date() - rtime < delta) {
-      setTimeout(resizeend, delta);
-    } else {
-      timeout = false;
-      location.reload();
-    }
-  }
-
   if (window.innerWidth >= 1024) {
     const section = DOMStrings.pictures_section;
     const currentList = DOMStrings.pictures_list;
